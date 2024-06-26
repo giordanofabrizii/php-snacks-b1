@@ -8,26 +8,27 @@ Olimpia Milano - Cantù | 55-60 -->
         [
             "squadra1" => "Warriors",
             "squadra2" => "Lakers",
-            "punteggio" => $rand(1-100) .'-' . $rand(1-100),
+            "punteggio" => rand(1,100) .'-' . rand(1,100),
         ],
         [
             "squadra1" => "Clippers",
             "squadra2" => "Hawks",
-            "punteggio" => $rand(1-100) .'-' . $rand(1-100),
+            "punteggio" => rand(1,100) .'-' . rand(1,100),
         ],
         [
             "squadra1" => "Celtics",
             "squadra2" => "Heat",
-            "punteggio" => $rand(1-100) .'-' . $rand(1-100),
+            "punteggio" => rand(1,100) .'-' . rand(1,100),
         ],
         [
             "squadra1" => "Maveriks",
             "squadra2" => "Bucks",
-            "punteggio" => $rand(1-100) .'-' . $rand(1-100),
+            "punteggio" => rand(1,100) .'-' . rand(1,100),
         ],
     ];
 
     foreach($partite as &$partita) {
-        var_dump(partita[squadra1] . ' - ' . partita[squadra2] . ' | ' . partita[punteggio]);
+        echo ($partita['squadra1'] . ' - ' . $partita['squadra2'] . ' | ' . $partita['punteggio']);
     }
+
 ?>
