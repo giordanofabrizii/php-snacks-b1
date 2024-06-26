@@ -2,7 +2,7 @@
     // Con un form passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
     // che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. 
     // Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato"
-    
+
     $_GET['nome'] ?? '';
     $_GET['email'] ?? '';
     $_GET['age'] ?? '';
@@ -23,6 +23,12 @@
         <button type="submit">Invia</button>
     </form>
 
-    <?php if ($_GET['nome']) ?>
+    <?php if (strlen($_GET['nome']) >=3 && str_contains($_GET['email'], '.') && str_contains($_GET['email'], '@') && is_numeric($_GET['age'])) {
+        echo '<h1> Accesso riuscito </h1>' ;
+    } else {
+        echo '<h1> Accesso negato </h1>' ;
+    }
+
+    ?>
 </body>
 </html>
