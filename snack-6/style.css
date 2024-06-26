@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.insegnanti{
+    background-color: gray;
+}
+
+.pm{
+    background-color: green;
+}
+
+div{
+    padding: 1rem;
+    width: 25rem;
+    aspect-ratio: 2 / 1;
+    margin: 1rem;
+}
