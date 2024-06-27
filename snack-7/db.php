@@ -26,11 +26,11 @@
         ],
     ];
 
-    foreach($students as $student){
+    for ($j = 0; $j < count($students); $j++) {
         $voti = [];
-        for ($i = 0; $i <= rand(1,7); $i++) {
-            array_push($voti, rand(1,10));
+        for ($i = 0; $i <= rand(1, 7); $i++) {
+            array_push($voti, rand(1, 10));
         }
-        $student["voti"] = $voti;
+        $students[$j]["voti"] = $voti;
     }
 ?>

@@ -24,7 +24,7 @@
                             $sum += $voto;
                         };
                         $media = $sum / count($student["voti"]);
-                        echo $media;
+                        echo number_format($media, 1);
                     ?>
                 </h3>
             </li>
