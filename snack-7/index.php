@@ -17,12 +17,14 @@
                     <?php echo $student["nome"] . " " . $student["cognome"] ?>
                 </h1>
                 <h3>
-                    La media dei suoi voti &egrave;: <?php
-                    $sum = 0;
-                    foreach($student["voti"] as $voto) {
-                        $sum += $voto;
-                    } 
-                    echo $media = $sum / count($student["voti"])
+                    La media dei suoi voti &egrave;: 
+                    <?php
+                        $sum = 0;
+                        foreach($student["voti"] as $voto) {
+                            $sum += $voto;
+                        };
+                        $media = $sum / count($student["voti"]);
+                        echo $media;
                     ?>
                 </h3>
             </li>
