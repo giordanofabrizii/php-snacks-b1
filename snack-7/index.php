@@ -1,5 +1,5 @@
 <?php 
-    include __DIR__ . '/db.php'
+    require_once __DIR__ . '/db.php'
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +16,15 @@
                 <h1>
                     <?php echo $student["nome"] . " " . $student["cognome"] ?>
                 </h1>
-                <!-- <h3>
-                    La media dei suoi voti &grave;: <?php echo foreach($student["media"] as $voto) {
+                <h3>
+                    La media dei suoi voti &egrave;: <?php
+                    $sum = 0;
+                    foreach($student["voti"] as $voto) {
                         $sum += $voto;
-                    } ?>
-                </h3> -->
+                    } 
+                    echo $media = $sum / count($student["voti"])
+                    ?>
+                </h3>
             </li>
         <?php } ?>
     </ul>
