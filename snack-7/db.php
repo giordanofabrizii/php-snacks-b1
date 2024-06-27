@@ -7,22 +7,30 @@
         [
             "nome"=>"Davide",
             "cognome"=>"Alesci",
-            "voti"=>[5,7,9,2],
+            "voti"=>[],
         ],
         [
             "nome"=>"Mirko",
             "cognome"=>"Valle",
-            "voti"=>[10,4,7],
+            "voti"=>[],
         ],
         [
             "nome"=>"Elisabetta",
             "cognome"=>"Mirti",
-            "voti"=>[5,8,3,5],
+            "voti"=>[],
         ],
         [
             "nome"=>"Matteo",
             "cognome"=>"Di Mario",
-            "voti"=>[5.7,1,7,9.5,6],
+            "voti"=>[],
         ],
     ];
+
+    foreach($students as $student){
+        $voti = [];
+        for ($i = 0; $i <= rand(1,7); $i++) {
+            array_push($voti, rand(1,10));
+        }
+        $student["voti"] = $voti;
+    }
 ?>
