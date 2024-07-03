@@ -6,7 +6,7 @@ class Utente {
     protected $username; 
     protected $email;
     
-    protected function __construct($nome, $cognome, $username, $email) {
+    public function __construct($nome, $cognome, $username, $email) {
         $this->nome = $nome;
         $this->cognome = $cognome;
         $this->username = $username;
