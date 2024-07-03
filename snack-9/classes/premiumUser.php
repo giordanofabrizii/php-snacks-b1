@@ -12,7 +12,7 @@ class premiumUser extends utente{
      *
      * @return string
      */
-    public function getrewwards(){
+    public function getRewwards(){
         return $this->rewwards;
     }
 
@@ -22,7 +22,7 @@ class premiumUser extends utente{
      * @param string $rewards
      * @return none
      */
-    public function setrewards($rewards){
+    public function setRewards($rewards){
         $this->rewards = $rewards;
     }
 }
